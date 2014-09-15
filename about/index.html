@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--#include virtual='../head.html' -->
+    <title>Unix Tutorial: About</title>
+</head>
+
+<body>
+<header id="header">
+        <h1>Unix Tutorial</h1>
+</header>
+
+<!--#include virtual='../nav.html' -->
+
+<article class="article">
+    
+    <section>
+        <h3>Version Information</h3>
+        <p>
+            This website is based on <a href="../../midterm">an earlier version</a>
+            of the same tutorial. Its content and visual theme are the same, but the
+            design of this new version has been streamlined to improve compatibility,
+            usability, aesthetics and ease of maintinance.
+        </p>
+    </section>
+    
+    <h2>Version 2 Updates</h2>
+    
+    <section>
+        <h3>Backwards Compatibility</h3>
+        <p>
+            Users reported that the first version of the tutorial was not viewable on
+            browsers that did not recognize HTML5 tags. This was because the pale
+            green background necessary to view the main text was assigned to the article
+            tag, causing the text to display as black on black when the article tag
+            was not recognized. In this version, HTML5 elements that have background
+            colors are referenced by their ID. In addition, the body text is styled as
+            white on black, and the text is changed to black with the same selector that
+            sets its background color. This way, if the user's browser does not recognize
+            that selector, the text will still be readable.
+        </p>
+    </section>
+    
+    <section>
+        <h3>Global Navigation</h3>
+        <p>
+            The sidebar dropdowns are now handled by JavaScript rather than CSS alone.
+            They are opened by clicking instead of hovering, which makes them easier to
+            use and elminates the uncertainty of how mobile browsers will handle hovering.
+            The section names' underlined text and pointer-style cursor indicate that
+            they are clickable. A plus or minus symbol next to each section's name indicates
+            whether it is expanded or collapsed. In order to minimize visual clutter, only
+            one dropdown can be expanded at a time.
+        </p>
+        <p>
+            The color scheme of the dropdowns has been changed to better match the color
+            scheme of the rest of the website. The original version's dropdowns were
+            extremely bright in comparison to other elements, which was visually jarring
+            and drew unnecessary attention. When the user opens a navigation dropdown, its
+            sudden appearance draws enough attention without the aid of bright colors.
+        </p>
+        <h4>Small Window Useability</h4>
+        <p>
+            Media queries have been added to the website's CSS to alter how it displays in
+            narrow windows. This will benefit both desktop users who open tutorials in a
+            small window next to their UNIX console to view both at one, and mobile device
+            users. In order to preserve horizontal space, the global navigation bar becomes
+            a horizontal one at the top of the screen. Global navigation links become larger
+            to make them easier for mobile device users to click on. This alternate navigation
+            display for small windows makes the website basically functional at viewport widths
+            as narrow as 325 pixels.
+        </p>
+    </section>
+    
+    <section>
+        <h3>Hidden Solutions</h3>
+        <p>
+            Like in the first version of the tutorial, solutions to exercises are hidden
+            by default. However, in this version, shownig the solutions is handled
+            by a JavaScript onclick event instead of a CSS hover. This way, the solution
+            will remain visible when the user switches to another window - for example,
+            their UNIX console. This also ensures that solutions will be visible on
+            mobile browsers that do not account for hovering. Solutions are not collapsible
+            because there is no need to hide them after having seen them. This is indicated
+            by the disappearance of their plus sign.
+        </p>
+    </section>
+    
+    <section>
+        <h3>Ease of Maintinance</h3>
+        <p>
+            The global navigation, footer and the linked files in the document head
+            have been placed in external files and included via server side includes.
+            This will simplify site maintinance by minimizing the number of locations
+            in which changes must be made.
+        </p>
+    </section>
+    
+    <h2>Version 1 Documentation</h2>
+    
+    <section>
+        <h3>Design</h3>
+        <p>The color scheme of this website is based on the bright text and dark
+        backgrounds that terminal interefaces often use. This was done to
+        associate the visual theme of the website with its content. It also
+        makes the monospaced, dark-on-light sections of text, which represent
+        terminal input and output, look as though they match the rest of the
+        design. The majority of the text is in a dark, sans-serif on a light
+        background for ease
+        of reading and contrast with the terminal-style text.
+        </p>
+        <p>Care was taken to ensure that the website could be used easily
+        with almost any size of screen. Most users of Unix tutorials would
+        access them from the same device they are accessing the terminal from,
+        and this would usually not be a mobile device, but graceful degredation
+        to a small window size is still an important usability consideration
+        because it allows the user to view the tutorial and the terminal window
+        side by side. This feature also makes it accessable for mobile device
+        users.
+        </p>
+    </section>
+    
+    <section>
+        <h3>Organization</h3>
+        <p>The lessons in this tutorial are split up into categories. This
+        improves the website's usability; there are five categories, and the
+        largest category has five lessons, so the user never has to choose
+        between more than five options at once. The categorization of lessons
+        is based on which Unix features they have to do with, and they are
+        descriptively named. This allows a user who wants to find information on
+        one aspect of Unix but not an entire tutorial to find what they are
+        looking for quickly.
+        </p>
+        <p>Within each lesson, there are topical sub-sections and sections for
+        syntax, examples and exercisese within those. Users are accustomed to
+        heirarchial structures and can learn to understand them quickly, so a
+        heirarchy such as this is sutible for a small tutorial site that users
+        will only use for a few hours at most.
+        </p>
+    </section>
+    
+    <section>
+        <h3>Content</h3>
+        <p>The subjects covered in this tutorial were chosen because they are
+        relevant to all or most Unix users. Though many Unix distributions
+        include GUIs, these GUIs do not follow any standard, so it is not possible
+        to make a tutorial that applies to all or even most of them. Instead,
+        this tutorial focuses on things that can be done through the terminal,
+        the basic functionality of which varies very little between distributions.
+        In cases where there are major differences, such as the use of nano
+        insted of pico by distributions of Unix-like operating systems that the
+        GNU project contributed to, this is noted in the relevant lesson.
+        </p>
+    </section>
+    
+    <section>
+        <h3>Navigation</h3>
+        <p>Next and previous links are located at the top of all tutorial pages
+        to indicate that there is an order to the lessons and facilitate easy
+        browsing. On long pages, there is an additional set of links at the end
+        of the page so the user can move on to the next lesson without having to
+        scroll back to the top of the page. These links are intended as the user's
+        main means of navigation when workign throuigh the tutorial for the first
+        time.</p>
+        <p>The index pages of each section include next and previous links as
+        well. They are labeled "next topic" and "previous topic" instead of simply
+        "next" and "previous" to indicate that they are for navigating between
+        sections rather than individual lessons. The index pages themselves are
+        relatively sparse. They exist because some users will expect all sidebar
+        items to be links, including the headers, but they are inentionally
+        sparse so that users who navigate directly to the lessons will not miss
+        any information.
+        </p>
+        <p>The sidebar links can be used to jump between sections out of order.
+        This functionality would be useful for returning users who want to look
+        up something specific they remember from the tutorial. The sidebar has
+        fixed positioning so that it never scrolls off the visible part of the
+        page. This would be useful for users who wanted to move between lessons
+        quicky to compare them.
+        </p>
+    </section>
+    
+    <section>
+        <h3>Use of HTML and CSS</h3>
+        <p>HTML 5 was used for the markup because it has semantic tags that
+        XHTML 1.1 lacks. These additional tags provide better machine readability
+        and are easier to work with than the many classes of divs that would
+        have been necessary to structure the page the same way in XHTML 1.1.
+        </p>
+        <p>External CSS stylesheets were used to keep style information
+        completely separate from content and semantic markup. CSS was also used
+        in place of images for the decorative text in the header and sidebar,
+        improving accessibility and decreasing the size and number of files
+        necessary to load the website. The stylesheet itself is divided into
+        sections by comments for easy maintinance.
+        </p>
+    </section>
+    
+    
+    
+    
+    
+</article>
+
+<!--#include virtual='../footer.html' -->
+
+</body>
+</html>

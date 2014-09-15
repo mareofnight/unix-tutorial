@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--#include virtual='../head.html' -->
+    <title>Unix Tutorial: Getting Help</title>
+</head>
+
+<body>
+<header id="header">
+        <h1>Unix Tutorial</h1>
+</header>
+
+<!--#include virtual='../nav.html' -->
+
+<article class="article">
+    <h2>Getting Help</h2>
+    
+    <div class="next">
+        <a href="../users/your-account.html">next</a>
+    </div>
+    <div class="previous">
+        <a href="paths.html">previous</a>
+    </div>
+    
+    <section>
+        <h3>What is</h3>
+        <p>The whatis utility outputs a short description of another utility.
+        </p>
+        <h4>Syntax</h4>
+        <div class="code">
+            <kbd>whatis [utility]</kbd>
+        </div>
+        <h4>Examples</h4>
+        <div class="code">
+            <kbd>whatis ls</kbd>
+        </div>
+        <div class="code">
+            <kbd>whatis cat</kbd>
+        </div>
+        <h4>Exercise</h4>
+        <p>Use the what is utility to view a short description of the touch
+        utility.
+        </p>
+        <div class="solution" onClick="solutionOpen(this);" onmouseover="solutionOver( this );" onmouseout="solutionOut( this );">
+            <h5>solution</h5>
+            <div class="code">
+                <kbd>whatis touch<br /></kbd>
+                touch(1) - change file timestamps
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h3>Manual</h3>
+        <p><kbd>man</kbd> is a Unix utility that displays the manual for another
+        utility. The manual provides the most information of any of the help
+        features covered in this tutorial. It includes a description of the
+        utility, syntax, options, exit statuses, and information on copyright,
+        authorship and error reporting. The manual opens "on top of" the
+        terminal rather than outputting text as the other help features do.
+        Press <kbd>q</kbd> to exit the manual and return to the terminal.
+        </p>
+        <h4>Syntax</h4>
+        <div class="code">
+            <kbd>man [utility]</kbd>
+        </div>
+        <h4>Examples</h4>
+        <div class="code">
+            <kbd>man ls</kbd>
+        </div>
+        <div class="code">
+            <kbd>man cat</kbd>
+        </div>
+        <h4>Exercise</h4>
+        <p>Open the page of the Unix manual about the touch utility.
+        </p>
+        <div class="solution" onClick="solutionOpen(this);" onmouseover="solutionOver( this );" onmouseout="solutionOut( this );">
+            <h5>solution</h5>
+            <div class="code">
+                <kbd>man touch</kbd>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h3>Help Option</h3>
+        <p>Many utilities have a help option. This option causes the utility to
+        output the contents of its manual instead of performing its usual
+        function.
+        </p>
+        <h4>Syntax</h4>
+        <div class="code">
+            <kbd>[utility] --help</kbd>
+        </div>
+        <h4>Examples</h4>
+        <div class="code">
+            <kbd>ls --help</kbd>
+        </div>
+        <div class="code">
+            <kbd>cat --help</kbd>
+        </div>
+        <h4>Exercise</h4>
+        <p>Print the manual's information on the touch utility to the terminal.
+        </p>
+        <div class="solution" onClick="solutionOpen(this);" onmouseover="solutionOver( this );" onmouseout="solutionOut( this );">
+            <h5>solution</h5>
+            <div class="code">
+                <kbd>touch --help</kbd>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Apropos</h3>
+        <p>The apropos utility outputs the names and descriptions of utilities
+        that contain a given keyword in the headers of their manuals. It is
+        useful for finding the right utility for a task when you do not know
+        its name.
+        </p>
+        <h4>Syntax</h4>
+        <div class="code">
+            <kbd>apropos [keyword]</kbd>
+        </div>
+        <h4>Examples</h4>
+        <div class="code">
+            <kbd>apropos list</kbd>
+        </div>
+        <div class="code">
+            <kbd>apropos concatenate</kbd>
+        </div>
+        <h4>Exercise</h4>
+        <p>Use the apropos utility to display a list of Unix utilities that have
+        to do with timestamps.
+        </p>
+        <div class="solution" onClick="solutionOpen(this);">
+            <h5>solution</h5>
+            <div class="code">
+                <kbd>apropos timestamp</kbd>
+            </div>
+        </div>
+    </section>
+    
+    <div class="next">
+        <a href="../users/your-account.html">next</a>
+    </div>
+    <div class="previous">
+        <a href="paths.html">previous</a>
+    </div>
+    
+</article>
+
+<!--#include virtual='../footer.html' -->
+
+</body>
+</html>

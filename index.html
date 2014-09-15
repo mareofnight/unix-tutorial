@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <script type='text/javascript' src='nav.js'></script>
+    <title>Unix Tutorial</title>
+</head>
+
+<body onload="setup( document.getElementsByClassName( 'menuItemOpen' ) );">
+    
+<header id="header">
+        <h1>Unix Tutorial</h1>
+</header>
+
+<nav id="mainnav">
+    <ol class="menu">
+        <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( 'menuItemOpen' ) );">Basics
+            <ol class="subMenu">
+                <li class="subMenuItem"><a href="basics/howto.html">how&nbsp;to&nbsp;use&nbsp;this&nbsp;tutorial</a></li>
+                <li class="subMenuItem"><a href="basics/format.html">format&nbsp;of&nbsp;commands</a></li>
+                <li class="subMenuItem"><a href="basics/naming-conventions.html">naming&nbsp;conventions</a></li>
+                <li class="subMenuItem"><a href="basics/paths.html">paths</a></li>
+                <li class="subMenuItem"><a href="basics/help.html">getting&nbsp;help</a></li>
+            </ol>
+        </li>
+        <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( 'menuItemOpen' ) );">Users
+            <ol class="subMenu">
+                <li class="subMenuItem"><a href="users/your-account.html">your&nbsp;account</a></li>
+                <li class="subMenuItem"><a href="users/users.html">users</a></li>
+            </ol>
+        </li>
+        <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( 'menuItemOpen' ) );">Files & Directories
+            <ol class="subMenu">
+                <li class="subMenuItem"><a href="file-dir/navigation.html">navigation</a></li>
+                <li class="subMenuItem"><a href="file-dir/viewing.html">viewing&nbsp;files</a></li>
+                <li class="subMenuItem"><a href="file-dir/filemanip.html">manipulating&nbsp;files</a></li>
+                <li class="subMenuItem"><a href="file-dir/pico">pico</a></li>
+                <li class="subMenuItem"><a href="file-dir/dirmanip.html">manipulating&nbsp;directories</a></li>
+            </ol>
+        </li>
+        <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( 'menuItemOpen' ) );">Redirection
+            <ol class="subMenu">
+                <li class="subMenuItem"><a href="redirection/redirection-input.html">input</a></li>
+                <li class="subMenuItem"><a href="redirection/redirection-output.html">output</a></li>
+                <li class="subMenuItem"><a href="redirection/piping.html">piping</a></li>
+            </ol>
+        </li>
+        <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( 'menuItemOpen' ) );">Permissions
+            <ol class="subMenu">
+                <li class="subMenuItem"><a href="permissions/permissions.html">permissions</a></li>
+                <li class="subMenuItem"><a href="permissions/changing-permissions.html">changing&nbsp;permissions</a></li>
+            </ol>
+        </li>
+    </ol>
+</nav>
+
+<article class="article">
+    <h2>An Introduction to Unix</h2>
+    
+    <p>This tutorial is a general introudction to utilities and concepts found
+    in Unix and Unix-like operating systems.
+    
+    This tutorial should be useful to any beginner wanting to learn how to use
+    the terminal in Unix and Unix-like operating systems. The following lessons
+    will intorduce you to commonly used utilities and basic concepts and provide
+    you with a foundation for learning to use more advanced and specialized features.
+    </p>
+    
+    <h3 id="start"><a href="basics/howto.html">Start the Tutorial</a></h3>
+    
+    <section>
+        <h3>Topics Covered</h3>
+        
+        <ol class="index">
+        <li><a href="basics">Basics</a>
+            <ol>
+                <li><a href="basics/howto.html">how to use this tutorial</a></li>
+                <li><a href="basics/format.html">format of commands</a></li>
+                <li><a href="basics/naming-conventions.html">naming conventions</a></li>
+                <li><a href="basics/paths.html">paths</a></li>
+                <li><a href="basics/help.html">getting help</a></li>
+            </ol>
+        </li>
+        <li><a href="users">Users</a>
+            <ol>
+                <li><a href="users/your-account.html">your account</a></li>
+                <li><a href="users/users.html">users</a></li>
+            </ol>
+        </li>
+        <li><a href="file-dir">Files & Directories</a>
+            <ol>
+                <li><a href="file-dir/navigation.html">navigation</a></li>
+                <li><a href="file-dir/viewing.html">viewing files</a></li>
+                <li><a href="file-dir/filemanip.html">manipulating files</a></li>
+                <li><a href="file-dir/pico">pico</a></li>
+                <li><a href="file-dir/dirmanip.html">manipulating directories</a></li>
+            </ol>
+        </li>
+        <li><a href="redirection">Redirection</a>
+            <ol>
+                <li><a href="redirection/redirection-input.html">input</a></li>
+                <li><a href="redirection/redirection-output.html">output</a></li>
+                <li><a href="redirection/piping.html">piping</a></li>
+            </ol>
+        </li>
+        <li><a href="permissions">Permissions</a>
+            <ol>
+                <li><a href="permissions/permissions.html">permissions</a></li>
+                <li><a href="permissions/changing-permissions.html">changing permissions</a></li>
+            </ol>
+        </li>
+    </ol>
+        
+    </section>
+    
+</article>
+
+<footer id="footer">
+    <div id="copyright">&#169; Kim Desorcie 2012</div>
+    <div id="about"><a href="about">about this website</a></div>
+    <div id="home"><a href="#">home</a></div>
+</footer>
+
+</body>
+</html>

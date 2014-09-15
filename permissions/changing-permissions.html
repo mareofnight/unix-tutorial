@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--#include virtual='../head.html' -->
+    <title>Unix Tutorial: Changing Permissions</title>
+</head>
+
+<body>
+<header id="header">
+        <h1>Unix Tutorial</h1>
+</header>
+
+<!--#include virtual='../nav.html' -->
+
+<article class="article">
+    <h2>Changing Permissions</h2>
+    
+    <div class="next">
+        <a href="../">back to home</a>
+    </div>
+    <div class="previous">
+        <a href="permissions.html">previous</a>
+    </div>
+    
+    <section>
+        <h3>Viewing Permissions</h3>
+        <p>The long listing option of the list utility includes permissions
+        information in its output.
+        </p>
+        <h4>Syntax</h4>
+        <div class="code">
+            <kbd>ls -l[other options] [directory]</kbd>
+        </div>
+        <h4>Examples</h4>
+        <div class="code">
+            <kbd>ls -l</kbd>
+        </div>
+        <div class="code">
+            <kbd>ls -l courses/409</kbd>
+        </div>
+        <h4>Exercise</h4>
+        <p>Use the touch utility to create a new file named <kbd>example</kbd>
+        in your working directory. Use the list utility to print this file's
+        permissions information.
+        </p>
+        <div class="solution" onClick="solutionOpen(this);">
+            <h5>solution</h5>
+            <div class="code">
+                <kbd>touch example</kbd>
+            </div>
+            <div class="code">
+                <kbd>ls -l</kbd>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h3>Changing Permissions</h3>
+        <p>The chmod utility changes a file's permissions. It can be used with
+        either numeric or character
+        <a href="permissions.html" title="Unix permissions">permissions codes.</a>
+        </p>
+        <h4>Syntax</h4>
+        <h5>To set permissions with numbers:</h5>
+        <div class="code">
+            <kbd>chmod [permissions number] [path]</kbd>
+        </div>
+        <h5>To set permissions with characters:</h5>
+        <div class="code">
+            <kbd>chmod [ [user group character(s)]=[permissions character(s)] separated by commas] [path]</kbd>
+        </div>
+        <h5>To add permissions with characters:</h5>
+        <div class="code">
+            <kbd>chmod [ [user group character(s)]+[permissions character(s)] separated by commas] [path]</kbd>
+        </div>
+        <h5>To revoke permissions with characters:</h5>
+        <div class="code">
+            <kbd>chmod [ [user group character(s)]-[permissions character(s)] separated by commas] [path]</kbd>
+        </div>
+        <h4>Examples</h4>
+        <div class="code">
+            <kbd>chmod 755 /www</kbd>
+        </div>
+        <div class="code">
+            <kbd>chmod u=rwx,og=rx /www</kbd>
+        </div>
+        <div class="code">
+            <kbd>chmod 644 index.html</kbd>
+        </div>
+        <div class="code">
+            <kbd>chmod u=rw,og=r index.html</kbd>
+        </div>
+        <div class="code">
+            <kbd>chmod u-w static_document.txt</kbd>
+        </div>
+        <div class="code">
+            <kbd>chmod g+rwx,o+rx shared_folder</kbd>
+        </div>
+        <h4>Exercise</h4>
+        <p>Set the file so that it is read only for you and no other users
+        can see it. Print the permissions information using the list utility.
+        Then, change its permissions again to grant write permissions to
+        yourself and read permissions to other users in your group. Print its
+        permission information again to see the changes.
+        </p>
+        <div class="solution" onClick="solutionOpen(this);">
+            <h5>solution</h5>
+            <div class="code">
+                <kbd>chmod 400 example</kbd>
+            </div>
+            <p>or</p>
+            <div class="code">
+                <kbd>chmod u=r,go= example</kbd>
+            </div>
+            <div class="code">
+                <kbd>ls -l</kbd>
+            </div>
+            <div class="code">
+                <kbd>chmod u=rw,g=r example</kbd>
+            </div>
+            or
+            <div class="code">
+                <kbd>chmod 640 example</kbd>
+            </div>
+            <div class="code">
+                <kbd>ls -l</kbd>
+            </div>
+        </div>
+    </section>
+    
+    <div class="next">
+        <a href="../">back to home</a>
+    </div>
+    <div class="previous">
+        <a href="permissions.html">previous</a>
+    </div>
+    
+</article>
+
+<!--#include virtual='../footer.html' -->
+
+</body>
+</html>

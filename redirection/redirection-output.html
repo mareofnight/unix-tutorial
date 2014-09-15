@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--#include virtual='../head.html' -->
+    <title>Unix Tutorial: Output Redirection</title>
+</head>
+
+<body>
+<header id="header">
+        <h1>Unix Tutorial</h1>
+</header>
+
+<!--#include virtual='../nav.html' -->
+
+<article class="article">
+    <h2>Redirection: Output</h2>
+    
+    <div class="next">
+        <a href="piping.html">next</a>
+    </div>
+    <div class="previous">
+        <a href="redirection-input.html">previous</a>
+    </div>
+    
+    <section>
+        <h3>Saving Files with Redirection</h3>
+        <p>The simplest method of redirecting a utility's output functions as a
+        "save as", either creating a new file or replacing the contents of an
+        old one with the utility's output.
+        </p>
+        <h4>Syntax</h4>
+        <div class="code">
+            <kbd>[utility] [options] &gt; [output file]</kbd>
+        </div>
+        <h4>Examples</h4>
+        <div class="code">
+            <kbd></kbd>
+        </div>
+        <h4>Exercise</h4>
+        <p>
+            Use redirection and the concatonate utility to save a new file named output containing several
+            lines of text. To do this, use the default input (the keyboard) and
+            redirect the output. When you are done typing the input text, use
+            the keystroke <kbd>&#94;D</kbd> to run the command. When you are done,
+            use one of the file viewing utilities to check your work.
+        </p>
+        <div class="solution" onClick="solutionOpen(this);">
+            <h5>solution</h5>
+            <div class="code">
+                <kbd>cat &gt; output</kbd>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h3>Appending Files with Redirection</h3>
+        <p>It is also possible to use redirection to add more content to the
+        end of a file without deleting the old content. To do this, use a double
+        right angle bracket instead of a single one.
+        </p>
+        <h4>Syntax</h4>
+        <div class="code">
+            <kbd>[utility] [options] &gt;&gt; [output file]</kbd>
+        </div>
+        <h4>Examples</h4>
+        <div class="code">
+            <kbd>who &gt;&gt; all-logins.txt</kbd>
+        </div>
+        <h4>Exercise</h4>
+        <p>Use redirection and the concatonate utility to add a few more lines to the file you created. Use
+        a file viewing utility to check your work. You should see the text you
+        entered in the previous exercise, followed by the new text.
+        </p>
+        <div class="solution" onClick="solutionOpen(this);">
+            <h5>solution</h5>
+            <div class="code">
+                <kbd>cat &gt;&gt; output</kbd>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h3>Redirecting Both Input and Output</h3>
+        <p>It is possible to use both input and output redirection in the same
+        command. This can be used to process data and save the results in a
+        single command while preserving the original file.
+        </p>
+        <h4>Syntax</h4>
+        <div class="code">
+            <kbd>[utility] [options] &lt; [input file] &gt; [output file]</kbd>
+        </div>
+        <h4>Examples</h4>
+        <div class="code">
+            <kbd>sort &lt; prioritized-reading-list &gt; alphabetized-reading-list</kbd>
+        </div>
+        <h4>Exercise</h4>
+        <p>Use redirection and the concatonate utility to make a copy of the input file you created for the
+        input redirection exercise. Check your work; the two files should have
+        identical contents.
+        </p>
+        <div class="solution" onClick="solutionOpen(this);">
+            <h5>solution</h5>
+            <div class="code">
+                <kbd>cat &lt; input-file.txt &gt; output-file.txt</kbd>
+            </div>
+        </div>
+    </section>
+    
+    <div class="next">
+        <a href="piping.html">next</a>
+    </div>
+    <div class="previous">
+        <a href="redirection-input.html">previous</a>
+    </div>
+    
+</article>
+
+<!--#include virtual='../footer.html' -->
+
+</body>
+</html>

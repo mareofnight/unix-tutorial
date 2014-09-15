@@ -1,0 +1,301 @@
+/* ======================= layout ======================= */
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#mainnav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 9em;
+    padding: 1em;
+    margin-left: 1em;
+}
+#mainnav ol.menu {
+    margin-top: 6em;
+    padding-left: 0;
+    width: auto;
+}
+#mainnav ol.menu li.menuItem {
+    display: block;
+    padding-top: 1.5em;
+}
+.article {
+    padding: 1em 2em;
+    margin: 1em;
+    margin-left: 13.4em;
+    max-width: 40em;
+}
+section {
+    margin-left: 2em;
+}
+h3 {
+    margin-left: -1em;
+    margin-bottom: .5em;
+    margin-top: 1.5em;
+}
+#header {
+    display: block;
+    padding-left: 5em;
+    margin-left: 3em;
+    position: relative;
+}
+#footer {
+    padding: 1em;
+    height: 1em;
+    margin-bottom: 1em;
+    margin-top: 2em;
+    text-align: right;
+}
+#footer div {
+    /*float: right;*/
+    margin-left: 2em;
+    display: inline;
+}
+
+
+/* ======================= "terminal style" text ======================= */
+.code, kbd {
+    background-color: #000000;
+    color: #66ffff;
+    font-family: monospace;
+    padding: .3em;
+    margin: 0 .2em;
+}
+kbd {
+    color: #ffffff;
+}
+div.code {
+    margin: .5em;
+}
+
+
+/* ======================= solutions and h5 ======================= */
+div.solution * {
+    display: none;
+}
+h5 {
+    margin: 0;
+    padding-top: 1.5em;
+    font-size: 1em;
+}
+div.solutionOpen h5, div.solution h5 {
+    font-size: .8em;
+    display: block;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-top: 1em;
+    margin-left: 1em;
+    margin-right: 2em;
+}
+div.solution h5:before {
+    content: "+ "
+}
+div.solution h5 {
+    margin-left: .5em;
+    cursor: pointer;
+}
+
+
+/* ======================= next/previous links ======================= */
+.next a {
+    float: right;
+}
+.next a:after {
+    content: " \0020 \25BA";
+}
+.previous a:before {
+    content: "\25C4 \0020";
+}
+.next, .previous {
+    margin: 2em 0;
+}
+
+
+/* ======================= links ======================= */
+a:link {
+    text-decoration: underline;
+    color: #004444;
+}
+a:visited {
+    color: #002222;
+}
+a:hover {
+    color: #008888;
+}
+a:active {
+    color: #00ffff;
+}
+
+/* ======================= footer links ======================= */
+#footer a:link {
+    text-decoration: underline;
+    color: #99cccc;
+}
+#footer a:visited {
+    color: #77bbbb;
+}
+#footer a:hover {
+    color: #44bbbb;
+}
+#footer a:active {
+    color: #00ffff;
+}
+
+/* ======================= sidebar ======================= */
+
+#mainnav li {
+    list-style: none;
+}
+#mainnav ol.menu li.menuItemOpen, #mainnav ol.menu li.menuItem {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: .5em 0;
+    width: 10em;
+    z-index: 20;
+    display: block;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#mainnav ol.menu li.menuItem ol.subMenu {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+#mainnav ol.menu li.menuItem:before {
+    content: "+ ";
+}
+#mainnav ol.menu li.menuItemOpen:before {
+    content: "\2013 \00A0";
+}
+#mainnav ol.menu li.menuItemOpen ol.subMenu {
+    padding-top: 1em;
+    width: 11.5em;
+    overflow: visible;list-style: none;
+    margin-left: -1.5em;
+}
+
+#mainnav ol.menu li.menuItemOpen ol.subMenu li.subMenuItem a:link {
+    display: block;
+    position: relative;
+    background-color: #202020;
+    color: #cceeee;
+    padding: .5em;
+    border: thin solid #000000;
+}
+#mainnav ol.menu li.menuItemOpen ol.subMenu li.subMenuItem a:visited {
+    background-color: #202020;
+    color: #99cccc;
+    border: thin solid #000000;
+}
+#mainnav ol.menu li.menuItemOpen ol.subMenu li.subMenuItem a:hover {
+    background-color: #000000;
+    color: #eeffff;
+    text-shadow: -.1em .06em .5em #7fffcc;
+}
+#current {
+    color: #010101;
+    text-shadow: 0 0 .2em #335555;
+}
+
+/* ======================= color and embelishment ======================= */
+
+body {
+    font-family: sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+h3#start {
+    padding-left: 3em;
+}
+h2 {
+    margin-top: 1.5em;
+    margin-bottom: -.5em;
+}
+#mainnav {
+    background-color: #ddffff;
+    color: #000000;
+}
+#header {
+    background-color: #555555;
+    font-size: 1.2em;
+    text-shadow: -.1em .06em .5em #7fffcc;
+    color: #eeffff;
+    z-index: 10;
+}
+#header h1:first-letter {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    margin-left: -.5em;
+    display: block;
+    position: fixed;
+    text-shadow: -.05em .03em .3em #7fffcc;
+}
+.article {
+    background-color: #ddeeee;
+    color: #000000;
+}
+#footer {
+    background-color: #555555;
+    z-index: 1;
+    font-size: .9em;
+    padding: 1.2em;
+}
+
+
+/* ======================= narrow screen navigation style ======================= */
+
+@media only screen and (max-width: 47em) {
+    #header {
+        margin: 0 0 .5em 0;
+        padding: 0 0 0 1.5em;
+    }
+    h1 {
+        margin: 0;
+    }
+    #header h1:first-letter {
+        margin: 0;
+    }
+    #mainnav {
+        position: static;
+        width: 100%;
+        height: 5em;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    #mainnav ol.menu {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    #mainnav ol.menu li.menuItem, #mainnav ol.menu li.menuItemOpen {
+        display: inline-block;
+        width: auto;
+        padding: .5em;
+        font-size: 1.2em;
+    }
+    #mainnav ol.menu li.menuItemOpen {
+        z-index: 100;
+    }
+    #mainnav ol.menu li.menuItemOpen ol.subMenu {
+        position: absolute;
+        top: .5em;
+        left: 0;
+        text-align: left;
+    }
+    #mainnav ol.menu li.menuItemOpen ol.subMenu ul.subMenuItem {
+        
+    }
+    .article {
+        margin: 1em;
+    }
+}
+@media only screen and (max-width: 25em) {
+    #mainnav {
+        height: 8em;
+    }
+}

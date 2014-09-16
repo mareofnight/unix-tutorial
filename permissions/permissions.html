@@ -1,34 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <!--#include virtual='../head.html' -->
-    <title>Unix Tutorial: Permissions</title>
-</head>
 
-<body>
-<header id="header">
-        <h1>Unix Tutorial</h1>
-</header>
-
-<!--#include virtual='../nav.html' -->
-
-<article class="article">
     <h2>Permissions</h2>
-    
+
     <div class="next">
         <a href="changing-permissions.html">next</a>
     </div>
     <div class="previous">
         <a href="../redirection/piping.html">previous</a>
     </div>
-    
+
     <p>Permissions in Unix determine who can do what to a given file or
     directory. On a personal computer, they can be used to mark files as
     read-only. On a computer with many users, setting file permissions correctly
     is important for enabling sharing or collaboration while keeping files safe
     from accidental changes and vandalism.
     </p>
-    
+
     <section>
         <h3>User Types</h3>
         <p><strong>User</strong> (<span class="code">u</span>) is the owner of
@@ -45,7 +31,7 @@
         types.
         </p>
     </section>
-    
+
     <section>
         <h3>Permission Types</h3>
         <p><strong>Read</strong> (<span class="code">r</span>) is permission to
@@ -60,7 +46,7 @@
         directory (provided the user also has read permission for those files).
         </p>
     </section>
-    
+
     <section>
         <h3>Formats</h3>
         <p>Permissions can be written as a three digit number or a string of
@@ -122,7 +108,7 @@
             600
         </div>
     </section>
-    
+
     <section>
         <h3>Examples</h3>
         <p>644 or rw-r--r-- permissions are commonly used for non-executable files on the web,
@@ -135,17 +121,10 @@
         write.
         </p>
     </section>
-    
+
     <div class="next">
         <a href="changing-permissions.html">next</a>
     </div>
     <div class="previous">
         <a href="../redirection/piping.html">previous</a>
     </div>
-    
-</article>
-
-<!--#include virtual='../footer.html' -->
-
-</body>
-</html>

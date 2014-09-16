@@ -1,0 +1,143 @@
+
+      <h2>Viewing Files</h2>
+
+      <div class="next">
+          <a href="filemanip.html">next</a>
+      </div>
+      <div class="previous">
+          <a href="navigation.html">previous</a>
+      </div>
+
+      <section>
+          <h3>Concatonate</h3>
+          <p>The concatonate utility outputs the contents of one or more files in
+          succession. By default, the output is printed to the terminal, making
+          the concatonate utility a fast and easy way to view the contents of
+          small files.
+          </p>
+          <h4>Syntax</h4>
+          <div class="code">
+              <kbd>cat [options] [file name] [file name] [file name] [file name...]</kbd>
+          </div>
+          <h4>Examples</h4>
+          <div class="code">
+              <kbd>cat usernames.txt</kbd>
+          </div>
+          <div class="code">
+              <kbd>cat 2010_data 2011_data 2012_data</kbd>
+          </div>
+          <h4>Exercise</h4>
+          <p>Find a text file and use the concatonate utility to view it.
+          </p>
+          <div class="solution" onClick="solutionOpen(this);">
+              <h5>solution</h5>
+              <div class="code">
+                  <kbd>cat [file name]</kbd>
+              </div>
+          </div>
+      </section>
+
+      <section>
+          <h3>More and Less</h3>
+          <p>The less utility opens a file in an interface that displays its
+          contents a page at a time. There are several ways to navigate through
+          the file, including the space bar (which advances to the next page) and
+          the arrow keys. To exit, press <kbd>q</kbd>.
+          </p>
+          <p>More is an older utility that also pages through large files. More is
+          different from less in that it prints the file to the terminal rather
+          than opening its own interface, and it only allows for paging forward,
+          not backward. The more utility prints the next line when the user
+          presses <kbd>enter</kbd>, or the next page when the user presses
+          <kbd>space</kbd>.
+          </p>
+          <h4>Syntax</h4>
+          <div class="code">
+              <kbd>more [options] [file]</kbd>
+          </div>
+          <div class="code">
+              <kbd>less [options] [file]</kbd>
+          </div>
+          <h4>Examples</h4>
+          <div class="code">
+              <kbd>less story.txt</kbd>
+          </div>
+          <div class="code">
+              <kbd>more story.txt</kbd>
+          </div>
+          <h4>Exercise</h4>
+          <p>Open your text file in both the more and less utilities. Note the
+          differences in how they handle page turning.
+          </p>
+          <div class="solution" onClick="solutionOpen(this);">
+              <h5>solution</h5>
+              <div class="code">
+                  <kbd>more [file name]</kbd>
+              </div>
+              <div class="code">
+                  <kbd>less [file name]</kbd>
+              </div>
+          </div>
+      </section>
+
+      <section>
+          <h3>Head and Tail</h3>
+          <p>Head and tail print the first or last few lines of a file,
+          respectively, and print them to the terminal. The default number of
+          lines is ten. Alternately, options can be used to specify a number of
+          lines or bytes.
+          </p>
+          <h4>Syntax</h4>
+          <div class="code">
+              <kbd>head [options] [file]</kbd>
+          </div>
+          <div class="code">
+              <kbd>tail [options] [file]</kbd>
+          </div>
+          <h4>Output Length Option Syntax</h4>
+          <p>When using single character options to specify the length of the
+          output, the number of bytes or lines can be placed either before or
+          after the character, but never before the dash.
+          </p>
+          <div class="code">
+              <kbd>head -c400 file</kbd>
+          </div>
+          <div class="code">
+              <kbd>tail -5n file</kbd>
+          </div>
+          <p>When using options with a double dash and multiple characters, type
+          a <kbd>=</kbd> after the option, and then the number of lines or bytes,
+          with no spaces.
+          <div class="code">
+              <kbd>tail --bytes=150 file</kbd>
+          </div>
+          <div class="code">
+              <kbd>head --lines=3 file</kbd>
+          </div>
+          <h4>Examples</h4>
+          <div class="code">
+              <kbd>head names.txt</kbd>
+          </div>
+          <div class="code">
+              <kbd>tail data</kbd>
+          </div>
+          <h4>Exercise</h4>
+          <p>Print the first and last lines of your file to the terminal.
+          </p>
+          <div class="solution" onClick="solutionOpen(this);">
+              <h5>solution</h5>
+              <div class="code">
+                  <kbd>head --lines=1 [file name]</kbd>
+              </div>
+              <div class="code">
+                  <kbd>tail --lines=1 [file name]</kbd>
+              </div>
+          </div>
+      </section>
+
+      <div class="next">
+          <a href="filemanip.html">next</a>
+      </div>
+      <div class="previous">
+          <a href="navigation.html">previous</a>
+      </div>

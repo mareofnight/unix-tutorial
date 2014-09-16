@@ -1,0 +1,187 @@
+
+      <h2>Manipulating Files</h2>
+
+      <div class="next">
+          <a href="pico.html">next</a>
+      </div>
+      <div class="previous">
+          <a href="viewing.html">previous</a>
+      </div>
+
+      <section>
+          <h3>Touch</h3>
+          <p>The touch utility "makes contact" with a given file location. If the
+          specified file exists, using the touch utility updates the file's
+          timestamp to the current time. If the file does not exist, the touch
+          utility creates a file at that location.
+          </p>
+          <h4>Syntax</h4>
+          <div class="code">
+              <kbd>touch [path]</kbd>
+          </div>
+          <h4>Examples</h4>
+          <div class="code">
+              <kbd>touch file1.txt</kbd>
+          </div>
+          <div class="code">
+              <kbd>touch new_list</kbd>
+          </div>
+          <div class="code">
+              <kbd>touch data/2008/november/week1</kbd>
+          </div>
+          <h4>Exercise</h4>
+          <p>Use the change directory and list utilities to find a text file.
+          (If you are using
+          a distribution of Unix that includes a full GUI, you can instead create
+          a new file for this purpose using a text editor.) Use the long listing
+          (<kbd>-l</kbd>) option of the list utility to see the timestamp on the
+          file. Touch the file and then use the list utility with the long listing
+          option again to see the new timestamp. The file you touched should be
+          updated with the current time.
+          </p>
+          <div class="solution" onClick="solutionOpen(this);">
+              <h5>solution</h5>
+              <div class="code">
+                  <kbd>ls -l</kbd>
+              </div>
+              <div class="code">
+                  <kbd>touch [file]</kbd>
+              </div>
+              <div class="code">
+                  <kbd>ls -l</kbd>
+              </div>
+          </div>
+      </section>
+
+      <section>
+          <h3>Copy</h3>
+          <p>The copy utility creates a duplicate of the file in the first path at
+          the second path.
+          </p>
+          <h4>Syntax</h4>
+          <div class="code">
+              <kbd>cp [options] [path 1] [path 2]</kbd>
+          </div>
+          <h4>Examples</h4>
+          <div class="code">
+              <kbd>cp files/file1 files/file1copy</kbd>
+          </div>
+          <div class="code">
+              <kbd>cp data_template.txt new_data.txt</kbd>
+          </div>
+          <h4>Exercise</h4>
+          <p>Create a copy of the file you used in the previous exercise and name
+          the copy <kbd>example1.txt</kbd>. Use the list utility to check your
+          work.
+          </p>
+          <div class="solution" onClick="solutionOpen(this);">
+              <h5>solution</h5>
+              <div class="code">
+                  <kbd>cp [original file] example1.txt</kbd>
+              </div>
+              <div class="code">
+                  <kbd>ls</kbd>
+              </div>
+          </div>
+          <p>If you wish, the following command can be used to check that the
+          contents of the new file are the same as the original:
+          </p>
+          <div class="code">
+              <kbd>cat example1.txt</kbd>
+          </div>
+          <p>The output should be the same as the contents of the file you copied.
+          This utility will be covered in more detail in the section of the
+          tutorial about viewing files.
+          </p>
+      </section>
+
+      <section>
+          <h3>Move</h3>
+          <p>The mv utility is used to move or rename files. It creates a copy of
+          the file at the first location in the second location, then deletes the
+          original.
+          </p>
+          <h4>Syntax</h4>
+          <div class="code">
+              <kbd>mv [path 1] [path 2]</kbd>
+          </div>
+          <h4>Examples</h4>
+          <div class="code">
+              <kbd>mv files/file1 files/file2</kbd>
+          </div>
+          <div class="code">
+              <kbd>mv typo.txt type.txt</kbd>
+          </div>
+          <div class="code">
+              <kbd>mv new_data data/new_data</kbd>
+          </div>
+          <h4>Exercise</h4>
+          <p>Use the move utility to change the name of the copy you created in
+          the pervious exercise (<kbd>example1.txt</kbd>) to <kbd>example2.txt</kbd>.
+          Then list the files in that directory. You should be able to see
+          <kbd>example2.txt</kbd> but not <kbd>example1.txt</kbd>.
+          </p>
+          <div class="solution" onClick="solutionOpen(this);">
+              <h5>solution</h5>
+              <div class="code">
+                  <kbd>mv example1.txt example2.txt</kbd>
+              </div>
+              <div class="code">
+                  <kbd>ls</kbd>
+              </div>
+          </div>
+          <p>Next, move <kbd>example2.txt</kbd> one folder higher in the directory
+          structure. (That is, move it into its parent folder.) List the contents
+          of the directory that <kbd>example2.txt</kbd> used to be in and the
+          directory you moved it to. Only the latter should contain a file named
+          <kbd>example2.txt</kbd>.
+          <div class="solution" onClick="solutionOpen(this);">
+              <h5>solution</h5>
+              <div class="code">
+                  <kbd>mv example2.txt ../example2.txt</kbd>
+              </div>
+              <div class="code">
+                  <kbd>ls</kbd>
+              </div>
+              <div class="code">
+                  <kbd>ls ..</kbd>
+              </div>
+          </div>
+      </section>
+
+      <section>
+          <h3>Remove</h3>
+          <p>The rm utility deletes the file at the specified location.
+          </p>
+          <h4>Syntax</h4>
+          <div class="code">
+              <kbd>rm [path]</kbd>
+          </div>
+          <h4>Examples</h4>
+          <div class="code">
+              <kbd>rm files/file.txt</kbd>
+          </div>
+          <div class="code">
+              <kbd>rm junk_data</kbd>
+          </div>
+          <h4>Exercise</h4>
+          <p>Use the remove utility to delete <kbd>example2.txt</kbd>. Then, use
+          the list utility to make sure you deleted it successfully.
+          </p>
+          <div class="solution" onClick="solutionOpen(this);">
+              <h5>solution</h5>
+              <div class="code">
+                  <kbd>rm ../example2.txt</kbd>
+              </div>
+              <div class="code">
+                  <kbd>ls ..</kbd>
+              </div>
+          </div>
+      </section>
+
+      <div class="next">
+          <a href="pico.html">next</a>
+      </div>
+      <div class="previous">
+          <a href="viewing.html">previous</a>
+      </div>

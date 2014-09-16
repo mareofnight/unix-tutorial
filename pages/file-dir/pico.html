@@ -1,0 +1,138 @@
+
+      <h2>Pico</h2>
+
+      <div class="next">
+          <a href="dirmanip.html">next</a>
+      </div>
+      <div class="previous">
+          <a href="filemanip.html">previous</a>
+      </div>
+
+      <p>Pico is a text editor included in most Unix distributions. Its main use
+      is making very simple changes to text files; most people prefer to use vi
+      or emacs for extensive editing.
+      </p>
+      <p>The following command will launch pico:
+      </p>
+
+      <div class="code">
+          <kbd>pico</kbd>
+      </div>
+
+      <p>If you are using a Unix-like operating system derived from the GNU
+      project, <kbd>pico</kbd> will launch nano instead of pico. Nano is
+      extremely similar to pico, but with some additional features. It was
+      developed as a replacement for pico because pico's licinse was not a free
+      software licinse.
+      </p>
+
+      <section>
+          <h3>A note on syntax</h3>
+          <p>In Unix's help features and most resources on Unix, including this
+          tutorial, the <kbd>&#94;</kbd> character represents holding down the
+          control key while pressing the key immediately following it. Letters
+          combined with <kbd>&#94;</kbd> should be typed without holding down
+          shift, as though typing them in lower case, even if uppercase characters
+          are used to represent them.
+          </p>
+      </section>
+
+      <section>
+          <h3>Cut</h3>
+          <p><kbd>&#94;K</kbd> cuts (copies and deletes) the line of text the
+          cursor is in.
+          </p>
+          <h4>Syntax</h4>
+          <div class="code">
+              <kbd>&#94;K</kbd>
+          </div>
+          <h4>Exercise</h4>
+          <p>Use the touch utility to create a new file and open the file in Pico.
+          Type a few lines of text. (Include carriage returns; line breaks
+          enforced by the width of the terminal are not considered line breaks
+          for the purposes of copying text.) Copy one of the lines.
+          </p>
+      </section>
+
+      <section>
+          <h3>Un-</h3>
+          <p>The function of <kbd>&#94;U</kbd> depends on the last keystroke used.
+          In general, it does the opposite of the previous keystroke. For example, after
+          cutting text, <kbd>&#94;U</kbd> is used to paste. The current function
+          of <kbd>&#94;U</kbd> will be displayed somewhere in pico's interface.
+          </p>
+          <h4>Syntax</h4>
+          <div class="code">
+              <kbd>&#94;U</kbd>
+          </div>
+          <h4>Exercise</h4>
+          <p>"Uncopy" (that is, paste) the text that you copied in the previous
+          exercise.
+          </p>
+      </section>
+
+      <section>
+          <h3>Turning the Pages</h3>
+          <p>In some Unix distributions, the pico interface does not scroll, and
+          text is instead displayed in pages. <kbd>&#94;V</kbd> and
+          <kbd>&#94;Y</kbd> are used to
+          navigate through long files that require multiple pages.
+          </p>
+          <h4>Syntax</h4>
+          <h5>To go to the next page:</h5>
+          <div class="code">
+              <kbd>&#94;V</kbd>
+          </div>
+          <h5>To go to the previous page:</h5>
+          <div class="code">
+              <kbd>&#94;Y</kbd>
+          </div>
+          <h4>Exercise</h4>
+          <p>Add some nonsense characters to the file, including carraige returns,
+          to make the text extend past the first page. Observe how your distribution
+          of Unix handles this; some have scroll bars in their text editors, and
+          some do not. Use the previous and next commands to flip back and forth
+          through the pages.
+          </p>
+      </section>
+
+      <section>
+          <h3>Save</h3>
+          <p>Pico's save feature functions similarly to those of most programs.
+          After typing the <kbd>&#94;O</kbd> keystroke, you will be given a prompt
+          with the name the file will be saved as. By default, this is the file's
+          original name, but you can also change it to save a copy.
+          </p>
+          <h4>Syntax</h4>
+          <div class="code">
+              <kbd>&#94;O</kbd>
+          </div>
+          <h4>Exercise</h4>
+          <p>Save your file under a different name than the original.
+          </p>
+      </section>
+
+      <section>
+          <h3>Exit</h3>
+          <p><kbd>&#94;X</kbd> is used to exit pico and return to the terminal.
+          If changes to the file have not been saved,a prompt will give you a last
+          chance to save before exiting.
+          </p>
+          <h4>Syntax</h4>
+          <div class="code">
+              <kbd>&#94;X</kbd>
+          </div>
+          <h4>Exercise</h4>
+          <p>Exit pico, and then open your original file in pico. It should be
+          empty again because you didn not save your changes to this file name.
+          Exit pico again and then use it to open the copy you saved. This file
+          should containt the text you entered.
+          </p>
+      </section>
+
+      <div class="next">
+          <a href="dirmanip.html">next</a>
+      </div>
+      <div class="previous">
+          <a href="filemanip.html">previous</a>
+      </div>

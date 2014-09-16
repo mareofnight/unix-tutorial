@@ -1,0 +1,73 @@
+
+      <h2>Redirection: Piping</h2>
+
+      <div class="next">
+          <a href="../permissions/permissions.html">next</a>
+      </div>
+      <div class="previous">
+          <a href="redirection-output.html">previous</a>
+      </div>
+
+      <p>
+          Piping redirection in which the output of one utility becomes the input
+          for another. Using multiple programs to process a file using other redirection
+          methods would require saving a file for each intermediate step and
+          entering a different command for each program involved. Piping makes it
+          possible to execute multiple utilities in a single command.
+      </p>
+
+      <section>
+          <h3>How to Use Piping</h3>
+          <p>The <kbd>|</kbd> character is used to indicate a pipe between utilities.
+          Piping can also be combined with input and output redirection. It is
+          possible to use redirection to specify an input file for the first
+          utility, and/or an output file for the last utility.
+          </p>
+          <h4>Syntax</h4>
+          <div class="code">
+              <kbd>[first utility] [options] [ &lt; input file] |
+                  [second utility] [options] | [more utilities...] |
+                  [last utility] [options] [ &gt; output file]</kbd>
+          </div>
+          <h4>Examples</h4>
+          <div class="code">
+              <kbd>cat list.txt | sort</kbd>
+          </div>
+          <div class="code">
+              <kbd>cat list.txt | sort</kbd>
+          </div>
+          <div class="code">
+              <kbd>who | sort | cat > sorted_users.txt</kbd>
+          </div>
+          <h4>Exercise</h4>
+          <p>This exercise will use the word count
+          (<kbd>wc</kbd>) and concatonate utilities. The word count utility
+          outputs the number of lines, words and characters in its input.
+          </p>
+          <p>Create a new file with some text in it or make a copy of an existing
+          file and name it pipe-example.txt. Use piping to print the line, word and
+          character counts for this file to the terminal. Then, write a different
+          command that uses piping and redirection to save these values in the file
+          pipe-example-counts.txt. Use the cat utility to check your work when you
+          are done.
+          </p>
+          <div class="solution" onClick="solutionOpen(this);">
+              <h5>solution</h5>
+              <div class="code">
+                  <kbd>cat pipe-example.txt | wc</kbd>
+              </div>
+              <div class="code">
+                  <kbd>cat pipe-example.txt | wc > pipe-example-counts.txt</kbd>
+              </div>
+              <div class="code">
+                  <kbd>cat pipe-example-counts.txt</kbd>
+              </div>
+          </div>
+      </section>
+
+      <div class="next">
+          <a href="../permissions/permissions.html">next</a>
+      </div>
+      <div class="previous">
+          <a href="redirection-output.html">previous</a>
+      </div>

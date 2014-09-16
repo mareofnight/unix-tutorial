@@ -1,0 +1,78 @@
+
+      <h2>Paths</h2>
+
+      <div class="next">
+          <a href="help.html">next</a>
+      </div>
+      <div class="previous">
+          <a href="naming-conventions.html">previous</a>
+      </div>
+
+      <section>
+          <h3>Absolute Paths</h3>
+          <p><strong>Absolute paths</strong> describe where a file is relative to
+          the root directory or your home directory.
+          </p>
+          <p>The <strong>root directory</strong> is the directory that contains
+          all other files and directories. It is represented by a slash
+          (<span class="code">/</span>) at the beginning of a path (as opposed to the slashes
+          between parts of a path).
+          </p>
+          <p>A <strong>home directory</strong> is the main directory of a specific
+          user. It is located at <span class="code">/home/[your username]</span>. A tilde
+          (<span class="code">&#126;</span>) can be used to represent your home directory.
+          </p>
+          <h4>Examples</h4>
+          <div class="code">
+              /
+          </div>
+          <div class="code">
+              /home/tim/courses/409
+          </div>
+          <div class="code">
+              ~
+          </div>
+          <div class="code">
+              ~/courses/409
+          </div>
+      </section>
+
+      <section>
+          <h3>Relative Paths</h3>
+          <p>Relative paths describe where a file is relative to your working
+          directory. A period (<span class="code">.</span>) can be used to represent
+          your working directory, but paths that do not start with a tilde or
+          slash to indicate they are absolute
+          are treated as relative to the working directory by default,
+          so this is optional. A pair of periods (<span class="code">..</span>)
+          represent the <strong>parent</strong> of a directory; that is, the
+          directory that immediately contains it. Pairs of periods can be strung
+          together separated by slashes as though they are file names in order
+          to refer to something more than one directory higher than the working
+          directory.
+          </p>
+          <h4>Examples</h4>
+          <h5>Moving to a deeper directory</h5>
+          <div class="code">
+              <kbd>level4/level5</kbd>
+          </div>
+          <h5>Moving up a level</h5>
+          <div class="code">
+              <kbd>..</kbd>
+          </div>
+          <h5>Moving up two levels</h5>
+          <div class="code">
+              <kbd>../..</kbd>
+          </div>
+          <h5>Moving up two levels and then down one</h5>
+          <div class="code">
+              <kbd>../../level2</kbd>
+          </div>
+      </section>
+
+      <div class="next">
+          <a href="help.html">next</a>
+      </div>
+      <div class="previous">
+          <a href="naming-conventions.html">previous</a>
+      </div>

@@ -50,8 +50,9 @@ class page_utils {
   public static function get_nav($path_home) {
     $out = '
     <nav id="mainnav">
-        <ol class="menu">
-            <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( '."'menuItemOpen'".' ) );">
+        <div id="menuButton" onClick="opencloseMenu( document.getElementById('."'".'menuList'."'".') );"></div>
+        <ol id="menuList" class="menu">
+            <li class="menuItem" onClick="opencloseMenuItem( this );">
                 <span class="menuTitle">Basics</span>
                 <ol class="subMenu">
                     <li class="subMenuItem"><a href="'.$path_home.'basics/howto">how&nbsp;to&nbsp;use&nbsp;this&nbsp;tutorial</a></li>
@@ -61,14 +62,14 @@ class page_utils {
                     <li class="subMenuItem"><a href="'.$path_home.'basics/help">getting&nbsp;help</a></li>
                 </ol>
             </li>
-            <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( '."'menuItemOpen'".' ) );">
+            <li class="menuItem" onClick="opencloseMenuItem( this );">
                 <span class="menuTitle">Users</span>
                 <ol class="subMenu">
                     <li class="subMenuItem"><a href="'.$path_home.'users/your-account">your&nbsp;account</a></li>
                     <li class="subMenuItem"><a href="'.$path_home.'users/users">users</a></li>
                 </ol>
             </li>
-            <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( '."'menuItemOpen'".' ) );">
+            <li class="menuItem" onClick="opencloseMenuItem( this );">
                 <span class="menuTitle">Files & Directories</span>
                 <ol class="subMenu">
                     <li class="subMenuItem"><a href="'.$path_home.'file-dir/navigation">navigation</a></li>
@@ -78,7 +79,7 @@ class page_utils {
                     <li class="subMenuItem"><a href="'.$path_home.'file-dir/dirmanip">manipulating&nbsp;directories</a></li>
                 </ol>
             </li>
-            <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( '."'menuItemOpen'".' ) );">
+            <li class="menuItem" onClick="opencloseMenuItem( this );">
                 <span class="menuTitle">Redirection</span>
                 <ol class="subMenu">
                     <li class="subMenuItem"><a href="'.$path_home.'redirection/redirection-input">input</a></li>
@@ -86,7 +87,7 @@ class page_utils {
                     <li class="subMenuItem"><a href="'.$path_home.'redirection/piping">piping</a></li>
                 </ol>
             </li>
-            <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( '."'menuItemOpen'".' ) );">
+          <li class="menuItem" onClick="opencloseMenuItem( this );">
                 <span class="menuTitle">Permissions</span>
                 <ol class="subMenu">
                     <li class="subMenuItem"><a href="'.$path_home.'permissions/permissions">permissions</a></li>

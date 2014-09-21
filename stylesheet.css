@@ -140,6 +140,9 @@ a:active {
 
 /* ======================= sidebar ======================= */
 
+#mainnav #menuButton {
+  display: none;
+}
 #mainnav li {
   list-style-type: none;
 }
@@ -218,7 +221,7 @@ h2 {
     font-size: 1.2em;
     text-shadow: -.1em .06em .5em #7fffcc;
     color: #eeffff;
-    z-index: 10;
+    z-index: 2;
 }
 #header h1:first-letter {
     font-size: 1.5em;
@@ -261,6 +264,24 @@ h2 {
         padding: 0;
         text-align: center;
         font-size: 1.2em;
+    }
+    #mainnav .menu {
+      display: none;
+    }
+    #mainnav .menu.open {
+      display: block;
+    }
+    #mainnav #menuButton {
+      display: block;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      z-index: 4;
+      margin: 10px;
+      background-image: url('images/hamburger4x.png');
+      background-size: contain;
+      min-width: 1.22cm;
+      min-height: 1.22cm;
     }
     #mainnav ol.menu {
         padding: 0;

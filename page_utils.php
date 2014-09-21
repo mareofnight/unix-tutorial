@@ -24,6 +24,8 @@ class page_utils {
   <head>';
     $out = $out . '
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="height=device-height" />
     <link rel="stylesheet" href="'.$path_home.'stylesheet.css" type="text/css" />
     <link rel="shortcut icon" type="image/x-icon" href="'.$path_home.'favicon.ico">
     <script type="text/javascript" src="'.$path_home.'nav.js"></script>
@@ -49,7 +51,8 @@ class page_utils {
     $out = '
     <nav id="mainnav">
         <ol class="menu">
-            <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( '."'menuItemOpen'".' ) );">Basics
+            <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( '."'menuItemOpen'".' ) );">
+                <span class="menuTitle">Basics</span>
                 <ol class="subMenu">
                     <li class="subMenuItem"><a href="'.$path_home.'basics/howto">how&nbsp;to&nbsp;use&nbsp;this&nbsp;tutorial</a></li>
                     <li class="subMenuItem"><a href="'.$path_home.'basics/format">format&nbsp;of&nbsp;commands</a></li>
@@ -58,13 +61,15 @@ class page_utils {
                     <li class="subMenuItem"><a href="'.$path_home.'basics/help">getting&nbsp;help</a></li>
                 </ol>
             </li>
-            <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( '."'menuItemOpen'".' ) );">Users
+            <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( '."'menuItemOpen'".' ) );">
+                <span class="menuTitle">Users</span>
                 <ol class="subMenu">
                     <li class="subMenuItem"><a href="'.$path_home.'users/your-account">your&nbsp;account</a></li>
                     <li class="subMenuItem"><a href="'.$path_home.'users/users">users</a></li>
                 </ol>
             </li>
-            <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( '."'menuItemOpen'".' ) );">Files & Directories
+            <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( '."'menuItemOpen'".' ) );">
+                <span class="menuTitle">Files & Directories</span>
                 <ol class="subMenu">
                     <li class="subMenuItem"><a href="'.$path_home.'file-dir/navigation">navigation</a></li>
                     <li class="subMenuItem"><a href="'.$path_home.'file-dir/viewing">viewing&nbsp;files</a></li>
@@ -73,14 +78,16 @@ class page_utils {
                     <li class="subMenuItem"><a href="'.$path_home.'file-dir/dirmanip">manipulating&nbsp;directories</a></li>
                 </ol>
             </li>
-            <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( '."'menuItemOpen'".' ) );">Redirection
+            <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( '."'menuItemOpen'".' ) );">
+                <span class="menuTitle">Redirection</span>
                 <ol class="subMenu">
                     <li class="subMenuItem"><a href="'.$path_home.'redirection/redirection-input">input</a></li>
                     <li class="subMenuItem"><a href="'.$path_home.'redirection/redirection-output">output</a></li>
                     <li class="subMenuItem"><a href="'.$path_home.'redirection/piping">piping</a></li>
                 </ol>
             </li>
-            <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( '."'menuItemOpen'".' ) );">Permissions
+            <li class="menuItem" onClick="itemClick( this, document.getElementsByClassName( '."'menuItemOpen'".' ) );">
+                <span class="menuTitle">Permissions</span>
                 <ol class="subMenu">
                     <li class="subMenuItem"><a href="'.$path_home.'permissions/permissions">permissions</a></li>
                     <li class="subMenuItem"><a href="'.$path_home.'permissions/changing-permissions">changing&nbsp;permissions</a></li>

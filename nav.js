@@ -43,7 +43,9 @@ var menuController = menuController || {};
     }
   },
   setupView = function (callback) {
-    var nav = document.getElementById('mainnav');
+    var nav = document.getElementById('mainnav'),
+    articleHeight = document.getElementById('mainArticle').offsetHeight;
+    document.getElementById('mainnav').style.height = articleHeight + 'px';
     menuController.view = {
       button:   document.getElementById('menuButton'),
       menu:     document.getElementById('menuList'),
@@ -66,8 +68,6 @@ var menuController = menuController || {};
   },
   setup = function () {
     setupView(addEventListeners);
-    var articleHeight = document.getElementById('mainArticle').offsetHeight;
-    document.getElementById('mainnav').style.height = articleHeight + 'px';
   };
 
   menuController.setup = setup;

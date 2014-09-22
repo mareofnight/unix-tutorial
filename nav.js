@@ -1,60 +1,74 @@
-/* ==================== basic actions ==================== */
+var menuController = menuController || {};
 
-function closeMenu ( theMenu ) {
-  theMenu.className="";
-  theMenu.className="menu";
-}
-function openMenu ( theMenu ) {
-  theMenu.className="";
-  theMenu.className="menuOpen";
-}
+(function() {
+  'use strict';
 
-function closeMenuItem ( theItem ) {
-    theItem.className = theItem.className.replace('menuItemOpen','');
-}
-
-function openMenuItem ( theItem ) {
-    closeAllMenuItems ();
-    theItem.className= theItem.className + " menuItemOpen";
-}
-
-function closeAllMenuItems () {
-    var openItems = document.getElementsByClassName( 'menuItemOpen' );
-    for (i=0; i<openItems.length; i++) {
-        closeMenuItem(openItems[i]);
+  var addClass = function (theElement, theClass) {
+    theElement.className = theElement.className + ' ' + theClass;
+  },
+  removeClass = function (theElement, theClass) {
+    theElement.className = theElement.className.replace(theClass,'');
+  },
+  hasClass = function (theElement, theClass) {
+    if (theElement.className.indexOf(theClass) > -1) {
+      return true;
     }
-}
-
-
-/* ==================== event handlers ==================== */
-
-function opencloseMenu(theMenu) {
-  if (theMenu.className.indexOf('open') > -1) {
-    theMenu.className = theMenu.className.replace('open','');
-  }
-  else {
-    theMenu.className = theMenu.className + ' open';
-  }
-}
-
-function opencloseMenuItem (theItem) {
-  if (theItem.className.indexOf('menuItemOpen') > -1) {
-      closeMenuItem(theItem);
-  } else {
-    openMenuItem(theItem);
-  }
-}
-
-function itemClick ( theItem, openItems ) {
-
-    //if the item is open, close it
-    if (theItem.className.indexOf('menuItemOpen') > -1)
-    {
-        close(theItem);
+  },
+  opencloseMenu = function() {
+    var theMenu = menuController.view.menu,
+        openClass = 'open';
+    if (hasClass(theMenu, openClass)) {
+      removeClass(theMenu, openClass);
     }
-    //otherwise, open it
     else {
-        closeAll(openItems);
-        open(theItem);
+      addClass(theMenu, openClass);
     }
-}
+  },
+  closeAllItems = function () {
+    var i=0,
+        view = menuController.view,
+        numItems = view.items.length;
+    for (i=0; i<numItems; i++) {
+      removeClass(menuController.view.items[i], 'open');
+    }
+  },
+  opencloseItem = function () {
+    var theItem = this,
+        openClass = 'open';
+    if (hasClass(theItem, openClass)) {
+      removeClass(theItem, openClass);
+    } else {
+      closeAllItems ();
+      addClass(theItem, openClass);
+    }
+  },
+  setupView = function (callback) {
+    var nav = document.getElementById('mainnav');
+    menuController.view = {
+      button:   document.getElementById('menuButton'),
+      menu:     document.getElementById('menuList'),
+      items:    nav.getElementsByClassName('menuItem')
+    };
+    if (callback && typeof callback === 'function') {
+      callback();
+    }
+  },
+  addEventListeners = function () {
+    var i=0,
+        view = menuController.view,
+        numItems = view.items.length;
+
+    view.button.addEventListener('click', menuController.opencloseMenu);
+    for (i=0; i<numItems; i++) {
+      view.items[i].addEventListener('click', menuController.opencloseItem);
+    }
+  },
+  setup = function () {
+    setupView(addEventListeners);
+  };
+
+  menuController.setup = setup;
+  menuController.opencloseItem = opencloseItem;
+  menuController.opencloseMenu = opencloseMenu;
+
+}());

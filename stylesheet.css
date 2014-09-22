@@ -150,7 +150,7 @@ a:active {
     content: "+ ";
     margin-left: 1em;
 }
-#mainnav ol.menu li.menuItemOpen:before {
+#mainnav ol.menu li.open:before {
     content: "\2013 \00A0";
     margin-left: 1em;
 }
@@ -158,16 +158,20 @@ a:active {
 #mainnav .menuTitle {
   font-size: 1.2em;
 }
-#mainnav li.menuItem, #mainnav li.menuItemOpen {
+#mainnav li.menuItem, #mainnav li.open {
   border-bottom: 2px solid #202020;
 }
-#mainnav li.menuItem:first-child, #mainnav li.menuItemOpen:first-child {
+#mainnav li.menuItem:first-child, #mainnav li.open:first-child {
   border-top: 2px solid #202020;
 }
 #mainnav li.menuItem {
   padding: .5em 0;
 }
-#mainnav li.menuItemOpen {
+#mainnav li.menuItem:hover {
+  cursor: pointer;
+  background-color: #ccffff;
+}
+#mainnav li.menuItem.open {
   padding-top: .5em;
 }
 
@@ -188,11 +192,11 @@ a:active {
     color: #eeffff;
     text-shadow: -.1em .06em .5em #7fffcc;
 }
-#mainnav li.menuItemOpen ol.subMenu {
+#mainnav li.open ol.subMenu {
   display: block;
   padding-left: 0;
 }
-#mainnav li.menuItemOpen ol.subMenu li.subMenuItem a {
+#mainnav li.open ol.subMenu li.subMenuItem a {
     display: block;
 }
 
@@ -292,7 +296,7 @@ h2 {
         width: 100%;
         font-size: 1.1em;
     }
-    #mainnav ol.menu li.menuItem:before, #mainnav ol.menu li.menuItemOpen:before {
+    #mainnav ol.menu li.menuItem:before, #mainnav ol.menu li.open:before {
         margin-left: 0;
     }
     .article {

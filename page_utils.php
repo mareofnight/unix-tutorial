@@ -30,7 +30,9 @@ class page_utils {
     <link rel="shortcut icon" type="image/x-icon" href="'.$path_home.'favicon.ico">
     <script type="text/javascript" src="'.$path_home.'nav.js"></script>
     <script type="text/javascript" src="'.$path_home.'solution.js"></script>';
-    $out = $out . '  </head>
+    $out = $out . '
+  </head>
+  <body onLoad="menuController.setup();">
     ';
     /* This came right after </head>, but I don't know if it's needed
     <body onload="setup( document.getElementsByClassName( 'menuItemOpen' ) );">
@@ -50,9 +52,9 @@ class page_utils {
   public static function get_nav($path_home) {
     $out = '
     <nav id="mainnav">
-        <div id="menuButton" onClick="opencloseMenu( document.getElementById('."'".'menuList'."'".') );"></div>
+        <div id="menuButton"></div>
         <ol id="menuList" class="menu">
-            <li class="menuItem" onClick="opencloseMenuItem( this );">
+            <li class="menuItem">
                 <span class="menuTitle">Basics</span>
                 <ol class="subMenu">
                     <li class="subMenuItem"><a href="'.$path_home.'basics/howto">how&nbsp;to&nbsp;use&nbsp;this&nbsp;tutorial</a></li>
@@ -62,14 +64,14 @@ class page_utils {
                     <li class="subMenuItem"><a href="'.$path_home.'basics/help">getting&nbsp;help</a></li>
                 </ol>
             </li>
-            <li class="menuItem" onClick="opencloseMenuItem( this );">
+            <li class="menuItem">
                 <span class="menuTitle">Users</span>
                 <ol class="subMenu">
                     <li class="subMenuItem"><a href="'.$path_home.'users/your-account">your&nbsp;account</a></li>
                     <li class="subMenuItem"><a href="'.$path_home.'users/users">users</a></li>
                 </ol>
             </li>
-            <li class="menuItem" onClick="opencloseMenuItem( this );">
+            <li class="menuItem">
                 <span class="menuTitle">Files & Directories</span>
                 <ol class="subMenu">
                     <li class="subMenuItem"><a href="'.$path_home.'file-dir/navigation">navigation</a></li>
@@ -79,7 +81,7 @@ class page_utils {
                     <li class="subMenuItem"><a href="'.$path_home.'file-dir/dirmanip">manipulating&nbsp;directories</a></li>
                 </ol>
             </li>
-            <li class="menuItem" onClick="opencloseMenuItem( this );">
+            <li class="menuItem">
                 <span class="menuTitle">Redirection</span>
                 <ol class="subMenu">
                     <li class="subMenuItem"><a href="'.$path_home.'redirection/redirection-input">input</a></li>
@@ -87,7 +89,7 @@ class page_utils {
                     <li class="subMenuItem"><a href="'.$path_home.'redirection/piping">piping</a></li>
                 </ol>
             </li>
-          <li class="menuItem" onClick="opencloseMenuItem( this );">
+          <li class="menuItem">
                 <span class="menuTitle">Permissions</span>
                 <ol class="subMenu">
                     <li class="subMenuItem"><a href="'.$path_home.'permissions/permissions">permissions</a></li>
@@ -107,7 +109,8 @@ class page_utils {
       <div id="about"><a href="'.$path_home.'about">about this website</a></div>
       <div id="home"><a href="'.$path_home.'index.html">home</a></div>
     </footer>
-  </html>';
+  </body>
+</html>';
     return $out;
   }
 

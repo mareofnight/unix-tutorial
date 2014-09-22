@@ -4,47 +4,47 @@ body {
     margin: 0;
 }
 
-#mainnav {
-    position: fixed;
-    top: 0;
-    bottom: 0;/* this is a hack, make a better solution*/
-    width: 14em;
-    margin-left: 1em;
+#page {
+  max-width: 66em;
+  margin: 0 auto;
 }
-#mainnav ol.menu {
-    margin-top: 18ex;
-    padding-left: 0;
-    width: auto;
+
+#mainnav {
+  width: 14em;
+  margin: 0 1em;
+  float: left;
+  padding-top: 17ex;
 }
 .article {
-    padding: 1em 2em;
-    margin: 1em;
-    margin-left: 16.6em;
-    max-width: 40em;
-}
-section {
-    margin-left: 2em;
+  max-width: 45em;
+  min-width: 20em;
+  float: left;
+  margin-top: 14ex;
 }
 h3 {
-    margin-left: -1em;
     margin-bottom: .5em;
     margin-top: 1.5em;
 }
+section p {
+  margin-left: 1em;
+}
 #header {
-    display: block;
-    padding-left: 5em;
-    margin-left: 3em;
-    position: relative;
+    top: 1em;
+    position: absolute;
+    width: 66em;
+    margin-left: auto;
+    margin-right: auto;
 }
 #footer {
     padding: 1em;
     height: 1em;
-    margin-bottom: 1em;
     margin-top: 2em;
     text-align: right;
+    clear: both;
+    position: relative;
+    bottom: 0;
 }
 #footer div {
-    /*float: right;*/
     margin-left: 2em;
     display: inline;
 }
@@ -143,6 +143,9 @@ a:active {
 #mainnav #menuButton {
   display: none;
 }
+#mainnav ol.menu {
+  padding-left: 0;
+}
 #mainnav li {
   list-style-type: none;
 }
@@ -213,7 +216,7 @@ h3#start {
     padding-left: 3em;
 }
 h2 {
-    margin-top: 1.5em;
+    margin-top: .5em;
     margin-bottom: -.5em;
 }
 #mainnav {
@@ -221,17 +224,18 @@ h2 {
     color: #000000;
 }
 #header {
+  z-index: 2;
+}
+#header h1 {
     background-color: #555555;
-    font-size: 1.2em;
+    font-size: 2.5em;
     text-shadow: -.1em .06em .5em #7fffcc;
     color: #eeffff;
-    z-index: 2;
+    margin: .3em 0 .3em 2em;
 }
 #header h1:first-letter {
     font-size: 1.5em;
-    margin: 0;
-    padding: 0;
-    margin-left: -.5em;
+    margin: 0 0 0 .5em;
     display: block;
     position: fixed;
     text-shadow: -.05em .03em .3em #7fffcc;
@@ -239,6 +243,8 @@ h2 {
 .article {
     background-color: #ddeeee;
     color: #000000;
+    margin-left: .7em;
+    padding: 1.5em;
 }
 #footer {
     background-color: #555555;
@@ -250,7 +256,7 @@ h2 {
 
 /* ======================= narrow screen navigation style ======================= */
 
-@media only screen and (max-width: 47em) {
+@media only screen and (max-width: 56em) {
     #header {
         margin: 0 0 .5em 0;
         padding: 0 0 0 1.5em;
@@ -262,7 +268,7 @@ h2 {
         margin: 0;
     }
     #mainnav {
-        position: static;
+        float: none;
         width: 100%;
         margin: 0;
         padding: 0;
@@ -301,10 +307,23 @@ h2 {
     }
     .article {
         margin: 1em;
+        float: none;
     }
 }
-@media only screen and (max-width: 25em) {
-    #mainnav {
-        height: 8em;
-    }
+
+@media only screen and (max-width: 67em) {
+
+  #page {
+    max-width: 56em;
+  }
+  #mainnav {
+    width: 14em;
+  }
+  .article {
+    max-width: 35em;
+  }
+  #header {
+      width: 56em;
+  }
+
 }

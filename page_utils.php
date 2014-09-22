@@ -32,7 +32,7 @@ class page_utils {
     <script type="text/javascript" src="'.$path_home.'solution.js"></script>';
     $out = $out . '
   </head>
-  <body onLoad="menuController.setup();">
+  <body onLoad="menuController.setup();"><div id="page">
     ';
     /* This came right after </head>, but I don't know if it's needed
     <body onload="setup( document.getElementsByClassName( 'menuItemOpen' ) );">
@@ -109,7 +109,7 @@ class page_utils {
       <div id="about"><a href="'.$path_home.'about">about this website</a></div>
       <div id="home"><a href="'.$path_home.'index.html">home</a></div>
     </footer>
-  </body>
+  </div></body>
 </html>';
     return $out;
   }
@@ -124,7 +124,7 @@ class page_utils {
     }
 
     $out = '
-    <article class="article">';
+    <article id="mainArticle" class="article">';
 
     // choose content file
     if (strlen($page_path) <= 0) {

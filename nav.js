@@ -47,7 +47,8 @@ var menuController = menuController || {};
     menuController.view = {
       button:   document.getElementById('menuButton'),
       menu:     document.getElementById('menuList'),
-      items:    nav.getElementsByClassName('menuItem')
+      items:    nav.getElementsByClassName('menuItem'),
+      menuWrapper: document.getElementById('mainnav')
     };
     if (callback && typeof callback === 'function') {
       callback();
@@ -65,6 +66,8 @@ var menuController = menuController || {};
   },
   setup = function () {
     setupView(addEventListeners);
+    var articleHeight = document.getElementById('mainArticle').offsetHeight;
+    document.getElementById('mainnav').style.height = articleHeight + 'px';
   };
 
   menuController.setup = setup;

@@ -1,377 +1,378 @@
-/* ======================= layout ======================= */
-body {
-    padding: 0;
-    margin: 0;
-}
-
-#page {
-  max-width: 66em;          /* large screen page width is a little wider than before (article is also wider) */
-  margin: 0 auto;
-}
-
-/* This uses floats for positoning now, so that the sidebar does not have to be fixed position */
-/* The non-fixed sidebar can be scrolled, so it adapts to different screen sizes better */
-#mainnav {
-  width: 14em;
-  margin: 0 1em;
-  float: left;
-  padding-top: 17ex;
-  min-height: 37ex;         /* Prevents a too-short page from making items invisble - look at a 404 error to see this in action */
-}
-.article {
-  max-width: 45em;          /* Big-screen article is wider, now that medium-screen is an option */
-  float: left;
-  margin-top: 14ex;
-}
-
-
-h3 {
-    margin-bottom: .5em;
-    margin-top: 1.5em;
-}
-section p {
-  margin-left: 1em;
-}
-#header {
-    top: 1em;
-    position: absolute;
-    width: 66em;
-    margin-left: auto;
-    margin-right: auto;
-}
-#footer {
-    padding: 1em;
-    height: 1em;
-    margin-top: 2em;
-    text-align: right;
-    clear: both;
-    position: relative;
-    bottom: 0;
-}
-#footer div {
-    margin-left: 2em;
-    display: inline;
-}
-
-
-/* ======================= "terminal style" text ======================= */
-.code, kbd {
-    background-color: #000000;
-    color: #66ffff;
-    font-family: monospace;
-    padding: .3em;
-    margin: 0 .2em;
-}
-kbd {
-    color: #ffffff;
-}
-div.code {
-    margin: .5em;
-}
-
-
-/* ======================= solutions and h5 ======================= */
-div.solution * {
-    display: none;
-}
-div.solutionOpen h5, div.solution h5 {
-    font-size: 1.1em;                   /* Solution links are larger for easier clicking (see /file-dir/navigation for an example) */
-    display: block;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    padding-top: 1em;
-    margin: 0;
-    margin-left: 1em;
-    margin-right: 2em;
-}
-div.solution h5:before {
-    content: "+ "
-}
-div.solution h5 {
-    margin-left: .5em;
-    cursor: pointer;
-}
-
-
-/* ======================= next/previous links ======================= */
-.next a {
-    float: right;
-}
-.next a:after {
-    content: " \0020 \25BA";
-}
-.previous a:before {
-    content: "\25C4 \0020";
-}
-.next, .previous {
-    margin: 2em 0;
-    font-size: 1.2em;           /* larger links for easier clicking */
-}
-
-
-/* ======================= links ======================= */
-a:link {
-    text-decoration: underline;
-    color: #004444;
-}
-a:visited {
-    color: #002222;
-}
-a:hover {
-    color: #008888;
-}
-a:active {
-    color: #00ffff;
-}
-
-/* ======================= footer links ======================= */
-#footer a:link {
-    text-decoration: underline;
+/* ======================= layout ======================= */
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#page {
+  max-width: 66em;          /* large screen page width is a little wider than before (article is also wider) */
+  margin: 0 auto;
+}
+
+/* This uses floats for positoning now, so that the sidebar does not have to be fixed position */
+/* The non-fixed sidebar can be scrolled, so it adapts to different screen sizes better */
+#mainnav {
+  width: 14em;
+  margin: 0 1em;
+  float: left;
+  padding-top: 17ex;
+  min-height: 37ex;         /* Prevents a too-short page from making items invisble - look at a 404 error to see this in action */
+}
+.article {
+  max-width: 45em;          /* Big-screen article is wider, now that medium-screen is an option */
+  float: left;
+  margin-top: 14ex;
+}
+
+
+h3 {
+    margin-bottom: .5em;
+    margin-top: 1.5em;
+}
+section p {
+  margin-left: 1em;
+}
+#header {
+    top: 1em;
+    position: absolute;
+    width: 66em;
+    margin-left: auto;
+    margin-right: auto;
+}
+#footer {
+    padding: 1em;
+    height: 1em;
+    margin-top: 2em;
+    text-align: right;
+    clear: both;
+    position: relative;
+    bottom: 0;
+}
+#footer div {
+    margin-left: 2em;
+    display: inline;
+}
+
+
+/* ======================= "terminal style" text ======================= */
+.code, kbd {
+    background-color: #000000;
+    color: #66ffff;
+    font-family: monospace;
+    padding: .3em;
+    margin: 0 .2em;
+}
+kbd {
+    color: #ffffff;
+}
+div.code {
+    margin: .5em;
+}
+
+
+/* ======================= solutions and h5 ======================= */
+div.solution * {
+    display: none;
+}
+div.solutionOpen h5, div.solution h5 {
+    font-size: 1.1em;                   /* Solution links are larger for easier clicking (see /file-dir/navigation for an example) */
+    display: block;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-top: 1em;
+    margin: 0;
+    margin-left: 1em;
+    margin-right: 2em;
+}
+div.solution h5:before {
+    content: "+ "
+}
+div.solution h5 {
+    margin-left: .5em;
+    cursor: pointer;
+}
+
+
+/* ======================= next/previous links ======================= */
+.next a {
+    float: right;
+}
+.next a:after {
+    content: " \0020 \25BA";
+}
+.previous a:before {
+    content: "\25C4 \0020";
+}
+.next, .previous {
+    margin: 2em 0;
+    font-size: 1.2em;           /* larger links for easier clicking */
+}
+
+
+/* ======================= links ======================= */
+a:link {
+    text-decoration: underline;
+    color: #004444;
+}
+a:visited {
+    color: #002222;
+}
+a:hover {
+    color: #008888;
+}
+a:active {
+    color: #00ffff;
+}
+
+/* ======================= footer links ======================= */
+#footer a:link {
+    text-decoration: underline;
+    color: #99cccc;
+}
+#footer a:visited {
+    color: #77bbbb;
+}
+#footer a:hover {
+    color: #44bbbb;
+}
+#footer a:active {
+    color: #00ffff;
+}
+
+/* ======================= wide screen navigation ======================= */
+
+#mainnav #menuButton {
+  display: none;
+}
+#mainnav ol.menu {
+  padding-left: 0;
+}
+#mainnav li {
+  list-style-type: none;
+}
+#mainnav ol.menu li.menuItem:before {
+    content: "+ ";
+    margin-left: 1em;
+}
+#mainnav ol.menu li.open:before {
+    content: "\2013 \00A0";
+    margin-left: 1em;
+}
+
+#mainnav .menuTitle {
+  font-size: 1.2em;
+}
+#mainnav li.menuItem, #mainnav li.open {
+  border-bottom: 2px solid #202020;
+}
+#mainnav li.menuItem:first-child, #mainnav li.open:first-child {
+  border-top: 2px solid #202020;
+}
+#mainnav li.menuItem {
+  padding: .5em 0;
+}
+#mainnav li.menuItem:hover {
+  cursor: pointer;
+  background-color: #ccffff;
+}
+#mainnav li.menuItem.open {
+  padding-top: .5em;
+}
+
+#mainnav li li a:link {
+  display: none;
+  position: relative;
+  background-color: #202020;
+  color: #cceeee;
+  padding: .5em;
+  border: none;
+}
+#mainnav li li a:visited {
     color: #99cccc;
-}
-#footer a:visited {
-    color: #77bbbb;
-}
-#footer a:hover {
-    color: #44bbbb;
-}
-#footer a:active {
-    color: #00ffff;
-}
-
-/* ======================= wide screen navigation ======================= */
-
-#mainnav #menuButton {
-  display: none;
-}
-#mainnav ol.menu {
-  padding-left: 0;
-}
-#mainnav li {
-  list-style-type: none;
-}
-#mainnav ol.menu li.menuItem:before {
-    content: "+ ";
-    margin-left: 1em;
-}
-#mainnav ol.menu li.open:before {
-    content: "\2013 \00A0";
-    margin-left: 1em;
-}
-
-#mainnav .menuTitle {
-  font-size: 1.2em;
-}
-#mainnav li.menuItem, #mainnav li.open {
-  border-bottom: 2px solid #202020;
-}
-#mainnav li.menuItem:first-child, #mainnav li.open:first-child {
-  border-top: 2px solid #202020;
-}
-#mainnav li.menuItem {
-  padding: .5em 0;
-}
-#mainnav li.menuItem:hover {
-  cursor: pointer;
-  background-color: #ccffff;
-}
-#mainnav li.menuItem.open {
-  padding-top: .5em;
-}
-
-#mainnav li li a:link {
-  display: none;
-  position: relative;
-  background-color: #202020;
-  color: #cceeee;
-  padding: .5em;
-  border: none;
-}
-#mainnav li li a:visited {
-    color: #99cccc;
-}
-#mainnav li li a:hover,
-#mainnav li li a:focus {
-    background-color: #000000;
-    color: #eeffff;
-    text-shadow: -.1em .06em .5em #7fffcc;
-}
-#mainnav li.open ol.subMenu {
-  display: block;
-  padding-left: 0;
-}
-#mainnav li.open ol.subMenu li.subMenuItem a {
-    display: block;
-}
-
-
-
-/* ======================= color and embelishment ======================= */
-
-body {
-    font-family: sans-serif;
-    background-color: #20282f;
-    color: #ffffff;
-    background-image: url('images/bg_med.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-}
-h3#start {
-    padding-left: 3em;
-}
-h2 {
-    margin-top: .5em;
-    margin-bottom: -.5em;
-}
-#mainnav {
-    background-color: #ddffff;
-    color: #000000;
-}
-#header {
-  z-index: 2;
-}
-#header h1 {
-    background-color: #555555;
-    font-size: 2.5em;
-    text-shadow: -.1em .06em .5em #7fffcc;
-    color: #eeffff;
-    margin: .3em 0 .3em 2em;
-}
-#header h1:first-letter {
-    font-size: 1.5em;
-    margin: 0 0 0 .5em;
-    display: block;
-    position: fixed;
-    text-shadow: -.05em .03em .3em #7fffcc;
-}
-.article {
-    background-color: #ddeeee;
-    color: #000000;
-    margin-left: .7em;
-    padding: 1.5em;
-}
-#footer {
-    background-color: #555555;
-    z-index: 1;
-    font-size: .9em;
-    padding: 1.2em;
-}
-
-
-/* ======================= narrow screen layout ======================= */
-@media only screen and (max-width: 60em) {
-    body {
-      background-image: none;
-    }
-    #header {
-      position: static;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-    }
-    #header h1 {
-      margin: 0;
-    }
-
-    /* Mobile navigation menu - redone from the previous version */
-    #page #mainnav {
-        float: none;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        text-align: center;
-        font-size: 1.2em;
-        height: auto !important;
-        min-height: 0;
-    }
-    #mainnav .menu {
-      display: none;
-    }
-    #mainnav .menu.open {
-      display: block;
-    }
-    #mainnav #menuButton {/* The button to show/hide the menu is new. */
-      display: block;
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      z-index: 4;
-      margin: 10px;
-      background-image: url('images/hamburger1x.png');
-      background-size: contain;
-      min-width: 1.22cm;
-      min-height: 1.22cm;
-    }
-    #mainnav ol.menu {
-        padding: 0;
-        margin: 0;
-        width: 100%;
-    }
-    #mainnav li.subMenuItem a {
-        width: 100%;
-        font-size: 1.1em;
-    }
-    #mainnav ol.menu li.menuItem:before, #mainnav ol.menu li.open:before {
-        margin-left: 0;
-    }
-
-    /* Making the article fill the screen width when there is no sidebar */
-    body #header {
-      width: 100%;
-    }
-    body #page {
-      max-width: 100%;
-      width: 100%;
-    }
-    #page .article {
-        margin: 1em;
-        float: none;
-        max-width: 100%;
-    }
-}
-
-@media only screen and (max-width: 67em) {
-
-  #page {
-    max-width: 56em;
-  }
-  #mainnav {
-    width: 14em;
-  }
-  .article {
-    max-width: 35em;
-  }
-  #header {
-      width: 56em;
-  }
-
-}
-
-/* ======================= background image scale ======================= */
-
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (min--moz-device-pixel-ratio: 2),
-only screen and (-moz-min-device-pixel-ratio: 2),
-only screen and (-o-min-device-pixel-ratio: 2/1),
-only screen and (min-device-pixel-ratio: 2),
-only screen and (min-resolution: 192dpi),
-only screen and (min-resolution: 2dppx) {
-    body {
-      background-image: url('images/bg_large.jpg');
-    }
-    #mainnav #menuButton {
-      background-image: url('images/hamburger2x.png');
-    }
-    @media only screen and (max-width: 1200px) {
-      background-image: none;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-  background-image: url('images/bg_med.jpg');
-}
-
-@media only screen and (min-width: 1370px) {
-  background-image: url('images/bg_large.jpg');
-}
+    background-color: #202020;
+}
+#mainnav li li a:hover,
+#mainnav li li a:focus {
+    background-color: #000000;
+    color: #eeffff;
+    text-shadow: -.1em .06em .5em #7fffcc;
+}
+#mainnav li.open ol.subMenu {
+  display: block;
+  padding-left: 0;
+}
+#mainnav li.open ol.subMenu li.subMenuItem a {
+    display: block;
+}
+
+
+
+/* ======================= color and embelishment ======================= */
+
+body {
+    font-family: sans-serif;
+    background-color: #20282f;
+    color: #ffffff;
+    background-image: url('images/bg_med.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+h3#start {
+    padding-left: 3em;
+}
+h2 {
+    margin-top: .5em;
+    margin-bottom: -.5em;
+}
+#mainnav {
+    background-color: #ddffff;
+    color: #000000;
+}
+#header {
+  z-index: 2;
+}
+#header h1 {
+    background-color: #555555;
+    font-size: 2.5em;
+    text-shadow: -.1em .06em .5em #7fffcc;
+    color: #eeffff;
+    margin: .3em 0 .3em 2em;
+}
+#header h1:first-letter {
+    font-size: 1.5em;
+    margin: 0 0 0 .5em;
+    display: block;
+    position: fixed;
+    text-shadow: -.05em .03em .3em #7fffcc;
+}
+.article {
+    background-color: #ddeeee;
+    color: #000000;
+    margin-left: .7em;
+    padding: 1.5em;
+}
+#footer {
+    background-color: #555555;
+    z-index: 1;
+    font-size: .9em;
+    padding: 1.2em;
+}
+
+
+/* ======================= narrow screen layout ======================= */
+@media only screen and (max-width: 60em) {
+    body {
+      background-image: none;
+    }
+    #header {
+      position: static;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+    #header h1 {
+      margin: 0;
+    }
+
+    /* Mobile navigation menu - redone from the previous version */
+    #page #mainnav {
+        float: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        font-size: 1.2em;
+        height: auto !important;
+        min-height: 0;
+    }
+    #mainnav .menu {
+      display: none;
+    }
+    #mainnav .menu.open {
+      display: block;
+    }
+    #mainnav #menuButton {/* The button to show/hide the menu is new. */
+      display: block;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      z-index: 4;
+      margin: 10px;
+      background-image: url('images/hamburger1x.png');
+      background-size: contain;
+      min-width: 1.22cm;
+      min-height: 1.22cm;
+    }
+    #mainnav ol.menu {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    #mainnav li.subMenuItem a {
+        width: 100%;
+        font-size: 1.1em;
+    }
+    #mainnav ol.menu li.menuItem:before, #mainnav ol.menu li.open:before {
+        margin-left: 0;
+    }
+
+    /* Making the article fill the screen width when there is no sidebar */
+    body #header {
+      width: 100%;
+    }
+    body #page {
+      max-width: 100%;
+      width: 100%;
+    }
+    #page .article {
+        margin: 1em;
+        float: none;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 67em) {
+
+  #page {
+    max-width: 56em;
+  }
+  #mainnav {
+    width: 14em;
+  }
+  .article {
+    max-width: 35em;
+  }
+  #header {
+      width: 56em;
+  }
+
+}
+
+/* ======================= background image scale ======================= */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-moz-min-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+    body {
+      background-image: url('images/bg_large.jpg');
+    }
+    #mainnav #menuButton {
+      background-image: url('images/hamburger2x.png');
+    }
+    @media only screen and (max-width: 1200px) {
+      background-image: none;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+  background-image: url('images/bg_med.jpg');
+}
+
+@media only screen and (min-width: 1370px) {
+  background-image: url('images/bg_large.jpg');
+}

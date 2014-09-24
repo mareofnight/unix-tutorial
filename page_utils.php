@@ -23,6 +23,7 @@ class page_utils {
 <html manifest="'.$path_home.'unix-tutorial.appcache">                                <!-- cache manifest file -->
   <head>';
     $out = $out . '
+    <title>Unix Tutorial</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width" />                             <!-- Set the viewport to use device pixels, not actual pixels -->
     <meta name="viewport" content="height=device-height" />

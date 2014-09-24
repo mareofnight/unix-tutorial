@@ -20,7 +20,7 @@ class page_utils {
 
   public static function get_head($path_home) {
     $out = '<!DOCTYPE html>
-<html>
+<html manifest="'.$path_home.'unix-tutorial.appcache">                                <!-- cache manifest file -->
   <head>';
     $out = $out . '
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -102,7 +102,7 @@ class page_utils {
   public static function get_footer($path_home) {
     $out = '
     <footer id="footer">
-      <div id="copyright">&#169; Kim Desorcie 2012</div>
+      <div id="copyright">&#169; Kim Desorcie 2014</div>
       <div id="about"><a href="'.$path_home.'about">about this website</a></div>
       <div id="home"><a href="'.$path_home.'index.html">home</a></div>
     </footer>

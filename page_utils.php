@@ -24,7 +24,7 @@ class page_utils {
   <head>';
     $out = $out . '
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width" />                             <!-- Set the viewport to use device pixels, not actual pixels -->
     <meta name="viewport" content="height=device-height" />
     <link rel="stylesheet" href="'.$path_home.'stylesheet.css" type="text/css" />
     <link rel="shortcut icon" type="image/x-icon" href="'.$path_home.'favicon.ico">
@@ -32,11 +32,8 @@ class page_utils {
     <script type="text/javascript" src="'.$path_home.'solution.js"></script>';
     $out = $out . '
   </head>
-  <body onLoad="menuController.setup();"><div id="page">
+  <body onLoad="menuController.setup();"><div id="page">                               <!-- needed an extra wrapper div to center the page on large screens -->
     ';
-    /* This came right after </head>, but I don't know if it's needed
-    <body onload="setup( document.getElementsByClassName( 'menuItemOpen' ) );">
-    */
     return $out;
   }
 
@@ -52,7 +49,7 @@ class page_utils {
   public static function get_nav($path_home) {
     $out = '
     <nav id="mainnav">
-        <div id="menuButton"></div>
+        <div id="menuButton"></div>                                                   <!-- added button for mobile menu -->
         <ol id="menuList" class="menu">
             <li class="menuItem">
                 <span class="menuTitle">Basics</span>
@@ -128,7 +125,7 @@ class page_utils {
 
     // choose content file
     if (strlen($page_path) <= 0) {
-      $page_file = "home.html";
+      $page_file = "index.html";
     }
     else {
       if (file_exists("pages/" . $page_path . ".html")) {

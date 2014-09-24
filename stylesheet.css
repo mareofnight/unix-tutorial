@@ -14,6 +14,7 @@ body {
   margin: 0 1em;
   float: left;
   padding-top: 17ex;
+  min-height: 37ex;
 }
 .article {
   max-width: 45em;
@@ -211,6 +212,9 @@ body {
     font-family: sans-serif;
     background-color: #000000;
     color: #ffffff;
+    background-image: url('images/bg_med.jpg');
+    background-attachment: fixed;
+    background-size: cover;
 }
 h3#start {
     padding-left: 3em;
@@ -255,35 +259,10 @@ h2 {
 
 
 /* ======================= narrow screen navigation style ======================= */
-/*
-#mainnav {
-  width: 14em;
-  margin: 0 1em;
-  float: left;
-  padding-top: 17ex;
-}
-.article {
-  max-width: 45em;
-  min-width: 20em;
-  float: left;
-  margin-top: 14ex;
-}
-h3 {
-    margin-bottom: .5em;
-    margin-top: 1.5em;
-}
-section p {
-  margin-left: 1em;
-}
-#header {
-    top: 1em;
-    position: absolute;
-    width: 66em;
-    margin-left: auto;
-    margin-right: auto;
-}
-*/
-@media only screen and (max-width: 56em) {
+@media only screen and (max-width: 60em) {
+    body {
+      background-image: none;
+    }
     #header {
       position: static;
       margin: 0;
@@ -301,6 +280,7 @@ section p {
         text-align: center;
         font-size: 1.2em;
         height: auto !important;
+        min-height: 0;
     }
     #mainnav .menu {
       display: none;
@@ -315,7 +295,7 @@ section p {
       right: 0px;
       z-index: 4;
       margin: 10px;
-      background-image: url('images/hamburger4x.png');
+      background-image: url('images/hamburger1x.png');
       background-size: contain;
       min-width: 1.22cm;
       min-height: 1.22cm;
@@ -361,4 +341,33 @@ section p {
       width: 56em;
   }
 
+}
+
+/* ======================= background image scale ======================= */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-moz-min-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+    body {
+      background-image: url('images/bg_large.jpg');
+    }
+    #mainnav #menuButton {
+      background-image: url('images/hamburger2x.png');
+    }
+    @media only screen and (max-width: 1200px) {
+      background-image: none;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+  background-image: url('images/bg_med.jpg');
+}
+
+@media only screen and (min-width: 1370px) {
+  background-image: url('images/bg_large.jpg');
 }
